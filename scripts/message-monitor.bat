@@ -1,0 +1,1 @@
+java -Djava.awt.headless=false -jar message-monitor-0.0.1-SNAPSHOT.jar --spring.config.location=properties/application.properties
