@@ -22,7 +22,7 @@ public class Consumer implements Runnable{
 	
 	public Consumer() {
 		Properties props = new Properties();
-		props.put("bootstrap.servers", "localhost:9092");
+		props.put("bootstrap.servers", "192.168.99.100:9092");
 		props.put("group.id", "consumer-tutorial");
 		props.put("key.deserializer", StringDeserializer.class.getName());
 		props.put("value.deserializer", StringDeserializer.class.getName());
@@ -35,7 +35,7 @@ public class Consumer implements Runnable{
 			
 			logger.info("Running the consumer process");
 			
-			consumer.subscribe(Arrays.asList("eventstopic"));
+			consumer.subscribe(Arrays.asList("eventstopic", "accounttopic", "transactiontopic"));
 
 			String[] recordArray = null;
 			

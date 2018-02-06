@@ -19,10 +19,11 @@ public class UiApplication implements Runnable{
 	public void showUi() {
 		logger.info("Loading UI");
 		JFrame frame = new JFrame("Message Monitor");
-		frame.setLocationRelativeTo(null);
+
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().add(showTable(),  BorderLayout.CENTER);
 		frame.setSize(700, 600);
+		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
 	}
 	
